@@ -1,0 +1,516 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="sunsealogo.png" type="image/png">
+    <!-- <link rel="icon" href="https://www.flaticon.com/free-icons/astronomy" title="astronomy icons"> -->
+    <title>Hotel SUNSEA</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="vendors/linericon/style.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="vendors/bootstrap-datepicker/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" href="vendors/nice-select/css/nice-select.css">
+    <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
+    <!-- main css -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Protest+Revolution&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+    <style>
+        .name {
+            height: 80px;
+            width: 70px;
+        }
+
+        /* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap'); */
+
+        * {
+            margin: 30;
+            padding: 50;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif
+        }
+
+        .container1 {
+            margin: 30px auto;
+        }
+
+        .container1 .card {
+            width: 10%;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            background: #fff;
+            border-radius: 0px;
+        }
+
+        body {
+            background: #eee
+        }
+
+
+
+        .btn.btn-primary {
+            background-color: #e0f0fc;
+            color: black;
+            box-shadow: none;
+            border: none;
+            font-size: 20px;
+            width: 100%;
+            height: 100%;
+        }
+
+        .btn.btn-primary:focus {
+            box-shadow: none;
+        }
+
+        .container1 .card .img-box {
+            width: 100px;
+            height: 80px;
+        }
+
+        .container1 .card img {
+            width: 100%;
+            object-fit: fill;
+        }
+
+        .container1 .card .number {
+            font-size: 24px;
+        }
+
+        .container1 .card-body .btn.btn-primary .fab.fa-cc-paypal {
+            font-size: 32px;
+            color: #3333f7;
+        }
+
+        .fab.fa-cc-amex {
+            color: #1c6acf;
+            font-size: 32px;
+        }
+
+        .fab.fa-cc-mastercard {
+            font-size: 32px;
+            color: red;
+        }
+
+        .fab.fa-cc-discover {
+            font-size: 32px;
+            color: orange;
+        }
+
+        .c-green {
+            color: green;
+        }
+
+        .box {
+            height: 40px;
+            width: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #ddd;
+        }
+
+        .btn.btn-primary.payment {
+            background-color: #1c6acf;
+            color: rgb(245, 237, 237);
+            border-radius: 0px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 24px;
+        }
+
+
+        .form__div {
+            height: 50px;
+            position: relative;
+            margin-bottom: 24px;
+        }
+
+        .form-control {
+            width: 100%;
+            height: 45px;
+            font-size: 14px;
+            border: 1px solid #DADCE0;
+            border-radius: 0;
+            outline: none;
+            padding: 2px;
+            background: none;
+            z-index: 1;
+            box-shadow: none;
+        }
+
+        .form__label {
+            position: absolute;
+            left: 16px;
+            top: 10px;
+            background-color: #fff;
+            color: #56aaef;
+            font-size: 16px;
+            transition: .3s;
+            text-transform: uppercase;
+        }
+
+        .form-control:focus+.form__label {
+            top: -8px;
+            left: 12px;
+            color: #1A73E8;
+            font-size: 12px;
+            font-weight: 500;
+            z-index: 10;
+        }
+
+        .form-control:not(:placeholder-shown).form-control:not(:focus)+.form__label {
+            top: -8px;
+            left: 12px;
+            font-size: 12px;
+            font-weight: 500;
+            z-index: 10;
+        }
+
+        .form-control:focus {
+            border: 1.5px solid #1A73E8;
+            box-shadow: none;
+        }
+
+
+        .col-12 {
+            display: flex;
+        }
+
+        #pmethods {
+            padding-top: 90px;
+        }
+    </style>
+</head>
+
+<body>
+    <!--================Header Area =================-->
+    <header class="header_area">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <a class="navbar-brand logo_h" href="index.html">
+                    <img class="name" src="sunsea.png" alt="">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+                    <ul class="nav navbar-nav menu_nav ml-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Overview</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="rooms.html">Rooms</a></li>
+                        <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                        <li class="nav-item submenu dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"
+                                aria-haspopup="true" aria-expanded="false">Blog</a>
+                            <ul class="dropdown-menu">
+                                <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
+                                <li class="nav-item"><a class="nav-link" href="reviews.html">Reviews</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="elements.html">Elemests</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link" href="logsing.html">log In/Sing Up</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!--================Header Area =================-->
+
+
+    <!-- payment code my
+    <div class="container">
+
+         <div class="row">
+            <div class="col-lg-4 mb-lg-0 mb-3">
+                <div class="card p-3">
+                    <div class="img-box">
+                        <img src="https://www.freepnglogos.com/uploads/visa-logo-download-png-21.png" alt="">
+                    </div>
+                    <div class="number">
+                        <label class="fw-bold" for="">**** **** **** 1060</label>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between">
+                        <small><span class="fw-bold">Expiry date:</span><span>10/16</span></small>
+                        <small><span class="fw-bold">Name:</span><span>Kumar</span></small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-lg-0 mb-3">
+                <div class="card p-3">
+                    <div class="img-box">
+                         <img src="https://www.freepnglogos.com/uploads/mastercard-png/file-mastercard-logo-svg-wikimedia-commons-4.png"
+                            alt=""> -->
+    <!-- </div>
+                    <div class="number">
+                        <label class="fw-bold">**** **** **** 1060</label>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between">
+                        <small><span class="fw-bold">Expiry date:</span><span>10/16</span></small>
+                        <small><span class="fw-bold">Name:</span><span>Kumar</span></small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-lg-0 mb-3">
+                <div class="card p-3">
+                    <div class="img-box">
+                         <img src="https://www.freepnglogos.com/uploads/discover-png-logo/credit-cards-discover-png-logo-4.png"
+                            alt=""> -->
+    <!-- </div> -->
+    <!-- <div class="number">
+                        <label class="fw-bold">**** **** **** 1060</label>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between">
+                        <small><span class="fw-bold">Expiry date:</span><span>10/16</span></small>
+                        <small><span class="fw-bold">Name:</span><span>Kumar</span></small>
+                    </div>
+                </div>
+            </div> 
+            <div class="col-12 mt-4">
+                <div class="card p-3">
+                    <p class="mb-0 fw-bold h4">Payment Methods</p>
+                </div> -->
+    <!-- </div>  -->
+
+
+
+
+
+
+    <div class="col-12" id="pmethods"></div>
+    <div class="card p-3">
+        <div class="card-body border p-0">
+            <p>
+                <a class="btn btn-primary w-100 h-100 d-flex align-items-center justify-content-between" href=""
+                   data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                    <span class="fw-bold">Pay Through UPI</span>
+                    <!-- <div>
+                        <a href="">Google Pay</a></span>
+                        <a href="">Paytm</a></span>
+                        <a href="">Phone Pay</a></span>
+                    </div> -->
+                </a>
+            </p>
+            <div class="collapse p-3 pt-0" id="collapseExample">
+                <div class="row">
+                    <div class="col-8">
+                        <p class="h4 mb-0">Summary</p>
+                        <p class="mb-0"><span class="fw-bold">Room no:</span><span class="c-green">Type of Room
+                                :</span>
+                        </p>
+                        <p class="mb-0"><span class="fw-bold">Price:</span><span class="c-green">₹4520</span></p>
+                        <p class="mb-0">Special Requests</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-body border p-0">
+            <p>
+                <a class="btn btn-primary p-2 w-100 h-100 d-flex align-items-center justify-content-between"
+                    data-toggle="dropdown" href="#collapseExample" role="button">
+                    <span class="fw-bold">Credit Card</span>
+                    <!-- <span class="">
+                        <input type="checkbox" class="btncheck1" id="btncheck1" autocomplete="off">
+                        <label class="btncheck" for="btncheck1">VISA</label>
+
+                        <input type="checkbox" class="btncheck" id="btncheck2" autocomplete="off">
+                        <label class="btn btn-outline-primary" for="btncheck2">MASTERCARD</label>
+
+                        <input type="checkbox" class="btncheck" id="btncheck3" autocomplete="off">
+                        <label class="btn btn-outline-primary" for="btncheck3">RUPAY</label>
+                    </span> -->
+                </a>
+            </p>
+            <div class="collapse show p-3 pt-0" id="collapseExample">
+                <div class="row">
+                    <div class="col-lg-5 mb-lg-0 mb-3">
+                        <p class="h4 mb-0">Summary</p>
+                        <p class="mb-0"><span class="fw-bold">Room No:</span><span class="c-green">Type of The
+                                Room</span>
+                        </p>
+                        <p class="mb-0">
+                            <span class="fw-bold">Price:</span>
+                            <span class="c-green">:₹4520.90</span>
+                        </p>
+                        <p class="mb-0">Additional</p>
+                    </div>
+                    <div class="col-lg-7">
+                        <span class="">
+                            <input type="checkbox" class="btncheck1" id="btncheck1" autocomplete="off">
+                            <label class="btn btn-outline-primary" for="btncheck1">VISA</label>
+
+                            <input type="checkbox" class="btncheck" id="btncheck2" autocomplete="off">
+                            <label class="btn btn-outline-primary" for="btncheck2">MASTERCARD</label>
+
+                            <input type="checkbox" class="btncheck" id="btncheck3" autocomplete="off">
+                            <label class="btn btn-outline-primary" for="btncheck3">RUPAY</label>
+                        </span>
+                        <form action="" class="form">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="form__div">
+                                        <input type="text" class="form-control" placeholder=" ">
+                                        <label for="" class="form__label">Card Number</label>
+                                    </div>
+                                </div>
+
+                                <div class="col-6">
+                                    <div class="form__div">
+                                        <input type="text" class="form-control" placeholder=" ">
+                                        <label for="" class="form__label">MM / yy</label>
+                                    </div>
+                                </div>
+
+                                <div class="col-6">
+                                    <div class="form__div">
+                                        <input type="password" class="form-control" placeholder=" ">
+                                        <label for="" class="form__label">cvv code</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form__div">
+                                        <input type="text" class="form-control" placeholder=" ">
+                                        <label for="" class="form__label">name on the card</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="btn btn-primary w-100">Confirm Payment</div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <!-- payment code end my -->
+    <!--================ start footer Area  =================-->
+    <footer class="footer-area section_gap">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3  col-md-6 col-sm-6">
+                    <div class="single-footer-widget">
+                        <h6 class="footer_title">About Agency</h6>
+                        <p>The world has become so fast paced that people don’t want to stand by reading a page of
+                            information, they would much rather look at a presentation and understand the message. It
+                            has come to a point </p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="single-footer-widget">
+                        <h6 class="footer_title">Navigation Links</h6>
+                        <div class="row">
+                            <div class="col-4">
+                                <ul class="list_style">
+                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="rooms.html">Feature</a></li>
+                                    <li><a href="events.html">Services</a></li>
+                                    <li><a href="about.html">Portfolio</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-4">
+                                <ul class="list_style">
+                                    <li><a href="logsing.html">Team</a></li>
+                                    <li><a href="rooms.html">Pricing</a></li>
+                                    <li><a href="reviews.html">Blog</a></li>
+                                    <li><a href="contact.html">Contact</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="single-footer-widget">
+                        <h6 class="footer_title">Newsletter</h6>
+                        <p>For business professionals caught between high OEM price and mediocre print and graphic
+                            output, </p>
+                        <div id="mc_embed_signup">
+                            <form target="_blank"
+                                action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
+                                method="get" class="subscribe_form relative">
+                                <div class="input-group d-flex flex-row">
+                                    <input name="EMAIL" placeholder="Email Address" onfocus="this.placeholder = ''"
+                                        onblur="this.placeholder = 'Email Address '" required="" type="email">
+                                    <button class="btn sub-btn"><span class="lnr lnr-location"></span></button>
+                                </div>
+                                <div class="mt-10 info"></div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="single-footer-widget instafeed">
+                        <h6 class="footer_title">InstaFeed</h6>
+                        <ul class="list_style instafeed d-flex flex-wrap">
+                            <li><img src="image/instagram/Image-01.jpg" alt=""></li>
+                            <li><img src="image/instagram/Image-02.jpg" alt=""></li>
+                            <li><img src="image/instagram/Image-03.jpg" alt=""></li>
+                            <li><img src="image/instagram/Image-04.jpg" alt=""></li>
+                            <li><img src="image/instagram/Image-05.jpg" alt=""></li>
+                            <li><img src="image/instagram/Image-06.jpg" alt=""></li>
+                            <li><img src="image/instagram/Image-07.jpg" alt=""></li>
+                            <li><img src="image/instagram/Image-08.jpg" alt=""></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="border_line"></div>
+            <div class="row footer-bottom d-flex justify-content-between align-items-center">
+                <!-- <p class="col-lg-8 col-sm-12 footer-text m-0">
+                     Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                <!-- Copyright &copy;
+                    <script>document.write(new Date().getFullYear());</script> All rights reserved | This template is
+                    made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com"
+                        target="_blank">Colorlib</a> -->
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                </p> 
+                <div class="col-lg-4 col-sm-12 footer-social">
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                    <a href="#"><i class="fa fa-dribbble"></i></a>
+                    <a href="#"><i class="fa fa-behance"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--================ End footer Area  =================-->
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="vendors/owl-carousel/owl.carousel.min.js"></script>
+    <script src="js/jquery.ajaxchimp.min.js"></script>
+    <script src="js/mail-script.js"></script>
+    <script src="vendors/bootstrap-datepicker/bootstrap-datetimepicker.min.js"></script>
+    <script src="vendors/nice-select/js/jquery.nice-select.js"></script>
+    <script src="js/mail-script.js"></script>
+    <script src="js/stellar.js"></script>
+    <script src="vendors/lightbox/simpleLightbox.min.js"></script>
+    <script src="js/custom.js"></script>
+</body>
+
+</html>
