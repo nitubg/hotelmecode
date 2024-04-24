@@ -428,10 +428,15 @@
                             <!-- <p class="mb-4">Lorem ipsum dolor sit amet elit. Sapiente sit aut eos consectetur
                                 adipisicing.</p> -->
                         </div>
-                        <form action="#" method="post">
+                        <form action="php/singin.php" method="post">
                             <div class="form-group first">
 
-                                <input type="text" class="form-control" placeholder="Phone no/Email" id="username">
+                                <input type="text" class="form-control" placeholder="Phone no/Email" id="username" name="email">
+
+                            </div>
+                            <div class="form-group last mb-3">
+
+                                <input type="text" class="form-control" placeholder="Name" id="password" name="name">
 
                             </div>
 
@@ -442,7 +447,7 @@
                             </div>
                             <div class="form-group first">
 
-                                <input type="text" class="form-control" placeholder="Enter Password" id="Password">
+                                <input type="text" class="form-control" placeholder="Enter Password" id="Password" name="password">
 
                             </div>
                             <div class="form-group last mb-3">
@@ -471,7 +476,8 @@
                                         Password</a></span>
                             </div> -->
                             <div class="form-btn">
-                                <a class="book_now_btn button_hover" href="logsing.html">Sing In</a>
+                                <input type="submit" class="book_now_btn button_hover" value="Sign In" name="signIn">
+                                
                             </div>
                             <!-- <a href="index.html">
                                 <input type="submit" value="Sing In" id="input" class="btn btn-block btn-primary">
@@ -616,6 +622,7 @@
     <script src="js/stellar.js"></script>
     <script src="vendors/lightbox/simpleLightbox.min.js"></script>
     <script src="js/custom.js"></script>
+    <script src="js/scriptuser.js"></script>
 </body>
 
 </html>
