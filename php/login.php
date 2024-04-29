@@ -2,9 +2,23 @@
         session_start();
         include("connect.php");
 
+        $email = $_POST['email'];
+        $password = $_POST['password'];
+        $password = md5($password);
+        
+        $query = "SELECT * FROM users WHERE email='$email' AND password='$password'";
+        
+        $results = $conn->query($query);
+        if (mysqli_num_rows($results) == 1) {
+            $_SESSION['email'] = $email;
+            $_SESSION['success'] = "You are now logged in";
+            //   header('location: index.php');
+            echo "Logged In";
+            exit();
+        } else
+            echo "Wrong username/password combination";
 
-
-
+?>
         // <!DOCTYPE html>
         // <html lang="en">
         // <head>
@@ -15,7 +29,7 @@
         // <body>
         //     <div style="text-align:center; padding:15%;">
         //       <p  style="font-size:50px; font-weight:bold;">
-        //        Hello  <?php 
+        //        Hello  
         //    if(isset($_SESSION['email'])){
         //     $email=$_SESSION['email'];
         //     $query=mysqli_query($conn, "SELECT users.* FROM `users` WHERE users.email='$email'");
@@ -24,7 +38,7 @@
         //     }
         //    }
         //     //    
-        ?>
+        
 //        :)
 //       </p>
 //       <a href="logout.php">Logout</a>
@@ -32,9 +46,7 @@
 // </body>
 // </html> -->
 
-
-<?php
-
+<!-- 
 // include 'connect.php';
 
 // $host = "localhost";
@@ -67,45 +79,29 @@
 
 
 //if(isset($_POST['login'])){
-    $email=$_POST['email'];
-    $password=$_POST['password'];
-    $password=md5($password) ;
 
-   /* if (empty($email)) {
+
+/* if (empty($email)) {
         array_push($errors, "email/phone no is required");
     }
     if (empty($password)) {
         array_push($errors, "Password is required");
     }*/
-  
-       
-        
-        $query = "SELECT * FROM users WHERE email='$email' AND password='$password'";
-        
-        $results = $conn->query($query);
-        if (mysqli_num_rows($results) == 1) {
-          $_SESSION['email'] = $email;
-          $_SESSION['success'] = "You are now logged in";
-        //   header('location: index.php');
-        echo "Logged In";
-          exit();
-        }else 
-            echo "Wrong username/password combination";
-       // }
-  //  }
-    
-    // $result=$conn->query($sql);
-    // if($result->num_rows>0){
-    //  session_start();
-    //  $row=$result->fetch_assoc();
-    //  $_SESSION['email']=$row['email'];
-    // //  header("Location: <php/login.php");
-    //  echo "Logged In";
-    //  exit();
-    // }
-    // else{
-    //  echo "Not Found, Incorrect Email or Password";
-    // }
 
- 
-?>
+
+// }
+//  } -->
+
+<!-- // $result=$conn->query($sql);
+// if($result->num_rows>0){
+//  session_start();
+//  $row=$result->fetch_assoc();
+//  $_SESSION['email']=$row['email'];
+// //  header("Location: <php/login.php");
+//  echo "Logged In";
+//  exit();
+// }
+// else{
+//  echo "Not Found, Incorrect Email or Password";
+// }
+ -->
