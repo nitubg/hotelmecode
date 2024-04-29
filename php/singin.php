@@ -1,37 +1,43 @@
-<?php 
+<?php
 
 include 'connect.php';
 
-if(isset($_POST['signIn'])){
-    $email=$_POST['email'];
-    $name=$_POST['name'];
-    $password=$_POST['password'];
-    $password=md5($password);
+if (isset($_POST['signIn'])) {
+    $email = $_POST['email'];
+    $name = $_POST['name'];
+    $password = $_POST['password'];
+    $password = md5($password);
 
-     $checkEmail="SELECT * From users where email='$email'";
-     $result=$conn->query($checkEmail);
-     if($result->num_rows>0){
+    $checkEmail = "SELECT * From users where email='$email'";
+    $result = $conn->query($checkEmail);
+    if ($result->num_rows > 0) {
         echo "Email Address Already Exists !";
-     }
-     else{
-        $insertQuery="INSERT INTO users(email,name,password)
+    } else {
+        $insertQuery = "INSERT INTO users(email,name,password)
                        VALUES ('$email','$name','$password')";
-            if($conn->query($insertQuery)==TRUE){
-                header("location: login.html");
-            }
-            else{
-                echo "Error:".$conn->error;
-            }
-     }
-   
-
+        if ($conn->query($insertQuery) == TRUE) {
+            // header("location: login.html");
+            // header(@link())
+            echo "Data added;now press back and Log In";
+        } else {
+            echo "Error:" . $conn->error;
+        }
+    }
 }
+
+
+
+
+
+
+
+
 
 // if(isset($_POST['signIn'])){
 //    $email=$_POST['email'];
 //    $password=$_POST['password'];
 //    $password=md5($password) ;
-   
+
 //    $sql="SELECT * FROM users WHERE email='$email' and password='$password'";
 //    $result=$conn->query($sql);
 //    if($result->num_rows>0){
@@ -46,4 +52,4 @@ if(isset($_POST['signIn'])){
 //    }
 
 // }
-// ?>
+// 
