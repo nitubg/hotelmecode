@@ -6,7 +6,7 @@ if (isset($_POST['signIn'])) {
     $email = $_POST['email'];
     $name = $_POST['name'];
     $password = $_POST['password'];
-    $password = md5($password);
+    // $password = md5($password);
 
     $checkEmail = "SELECT * From users where email='$email'";
     $result = $conn->query($checkEmail);

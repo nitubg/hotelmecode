@@ -12,7 +12,7 @@
         if (mysqli_num_rows($results) == 1) {
             $_SESSION['email'] = $email;
             $_SESSION['success'] = "You are now logged in";
-            //   header('location: index.php');
+            //   header('location: index.html');
             echo "Logged In";
             exit();
         } else
