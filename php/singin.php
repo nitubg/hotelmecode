@@ -24,6 +24,7 @@ if (isset($_POST['signIn'])) {
         }
     }
 }
+?>
 
 
 
@@ -31,8 +32,7 @@ if (isset($_POST['signIn'])) {
 
 
 
-
-
+<!-- 
 // if(isset($_POST['signIn'])){
 //    $email=$_POST['email'];
 //    $password=$_POST['password'];
@@ -44,12 +44,12 @@ if (isset($_POST['signIn'])) {
 //     session_start();
 //     $row=$result->fetch_assoc();
 //     $_SESSION['email']=$row['email'];
-//     header("Location: <php/login.php");
-//     exit();
-//    }
-//    else{
+<!-- //     header("Location: <php/login.php");
+<!-- //     exit();
+//    } --> -->
+<!-- //    else{
 //     echo "Not Found, Incorrect Email or Password";
-//    }
+//    } -->
 
 // }
-// 
+//  -->
